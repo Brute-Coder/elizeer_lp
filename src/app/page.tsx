@@ -40,20 +40,22 @@ export default function Home() {
           </Button>
         </div>
         {learnerCoutner && (
-          <div className="mt-10 flex justify-center items-center gap-2">
-            <div className="text-neutral-100 text-xl">
-              Total <span className=" text-green-300"> Excitment </span> Aura :
-            </div>
-            <motion.div
-              initial={{ scale: 0.5, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 1.0 }}
-            >
+          <motion.div
+            initial={{ scale: 0.5, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            <div className="mt-10 flex justify-center items-center gap-2">
+              <div className="text-neutral-100 text-xl">
+                Total <span className=" text-green-300"> Excitment </span> Aura
+                :
+              </div>
+
               <div className="text-yellow-600 text-3xl">
                 {learnerCoutner * 100}
               </div>
-            </motion.div>
-          </div>
+            </div>
+          </motion.div>
         )}
       </LampContainer>
       <div className=" text-sm font-mono -mt-11  tracking-tighter">
